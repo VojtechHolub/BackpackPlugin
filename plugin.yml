@@ -1,0 +1,14 @@
+name: Backpack
+version: 1.0.0
+main: cz.chatgpt.backpack.BackpackPlugin
+api-version: '26.3'
+description: Personal persistent backpacks
+commands:
+  backpack:
+    description: Open your personal backpack
+    usage: /backpack
+    aliases: [bp]
+permissions:
+  backpack.use:
+    description: Allows using the personal backpack
+    default: true
