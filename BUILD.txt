@@ -1,0 +1,17 @@
+Jak sestavit hotovy JAR
+
+Varianta A – GitHub Actions:
+1. Nahraj obsah teto slozky do noveho GitHub repository.
+2. Otevri zalozku Actions a povol GitHub Actions, pokud se zobrazi vyzva.
+3. Spust workflow "Build Backpack plugin" (Run workflow), nebo pushni commit.
+4. Po uspesnem behu otevri vysledek workflow a v sekci Artifacts stahni
+   Backpack-1.0.0. ZIP obsahuje hotovy backpack-1.0.0.jar.
+
+Varianta B – lokalne:
+Potrebujes JDK 25 a Maven. V korenove slozce projektu spust:
+    mvn clean package
+Hotovy soubor bude v target/backpack-1.0.0.jar.
+
+Poznamka: build workflow pouziva Spigot API 26.3-R0.1-SNAPSHOT.
+Na Aternos nelze nahrat libovolny vlastni JAR; plugin je urcen pro server,
+ktery dovoluje instalaci vlastnich pluginu.
